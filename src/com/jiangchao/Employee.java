@@ -37,12 +37,12 @@ public class Employee {
     }
 
 
-    // 无参构造器, 需要在设置所有域适当的默认值
+   /* // 无参构造器, 需要在设置所有域适当的默认值
     public Employee() {
         this.name = "";
         this.salary = 0.0;
         this.hireDay = LocalDate.now();
-    }
+    }*/
 
     public Employee(double salary){
         this("Employee #"+nextId, salary);
@@ -64,8 +64,8 @@ public class Employee {
         return id;
     }
 
-
-    public String getName() {
+    // final关键字声明得方法，不能被覆盖
+    public final String getName() {
         return name;
     }
 
@@ -102,12 +102,17 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + getSalary() +
                 ", hireDay=" + hireDay +
+                ", hDay=" + hDay +
                 '}';
     }
 
+    public Employee getBuddy(){
+        return null;
+    }
 
     public static void main(String[] args) {
         System.out.println("Employee的main方法");

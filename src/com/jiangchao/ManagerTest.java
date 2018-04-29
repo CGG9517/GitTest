@@ -1,6 +1,8 @@
 package com.jiangchao;
 
-import com.sun.glass.ui.Window;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /**
  * @Auther: Jiang Chao
@@ -8,24 +10,23 @@ import com.sun.glass.ui.Window;
  * @Description:
  * @version: 1.0
  */
-public class EmployeeTest {
-    public static void main(String[] args) {
-//        Employee a = new Employee(); // 类域（类属性）会默认初始化，而局域变量必须明确
+public class ManagerTest {
 
+    public static void main(String[] args) {
 //        Employee.main(null); // 真被调用了main
+        Manager boss = new Manager("Carl Crack", 75000, 1987, 12, 15);
+        boss.setBonus(5000);
         Employee[] staff = new Employee[3];
-        staff[0] = new Employee("Carl Crack", 75000, 1987, 12, 15);
+        staff[0] = boss;
+
         staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
         staff[2] = new Employee("Tony Tester", 65000, 1987, 12, 31);
 
-        for (Employee e:staff){
-            e.raiseSalary(5);
-
-        }
-
-        for (Employee e:staff){
+        for (Employee e : staff) {
             System.out.println(e);
         }
+
+
 
     }
 
