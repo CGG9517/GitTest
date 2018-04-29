@@ -45,13 +45,14 @@ public class Employee {
     }*/
 
     public Employee(double salary){
+        // this调用其他构造器
         this("Employee #"+nextId, salary);
     }
 
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
-        // this调用其他构造器
+        
     }
 
     public Employee(String name, double salary, int year, int month, int day) {
