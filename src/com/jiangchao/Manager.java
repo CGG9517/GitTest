@@ -1,4 +1,5 @@
 package com.jiangchao;
+import java.util.Objects;
 
 public class Manager extends Employee{
     private double bonus;
@@ -7,11 +8,16 @@ public class Manager extends Employee{
         this.bonus = bonus;
 //        setSalary(getSalary() + this.bonus);
     }
-   /*
-   // 不能覆盖final修饰得方法
-   public String getName(){
 
-    }*/
+    public double getBonus() {
+        return bonus;
+    }
+
+    /*
+       // 不能覆盖final修饰得方法
+       public String getName(){
+
+        }*/
     @Override
     public double getSalary() {
         return super.getSalary() + bonus;
@@ -26,12 +32,32 @@ public class Manager extends Employee{
     }
 
     @Override
+    public boolean equals(Object o) {
+
+        if (!super.equals(o)) return false;  // 超类中equals对超类需要的条件进行检验
+//        if (!(o instanceof Manager)) return false;
+        Manager manager = (Manager) o;
+        return Double.compare(manager.bonus, bonus) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(super.hashCode(), bonus);
+    }
+
+    @Override
 
     // 重写了超类得getBuddy方法，运行时实现动态绑定
     public Manager getBuddy(){
         return null;
     }
 
-
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                '{' +
+                "bonus=" + bonus +
+                '}';
+    }
 }
