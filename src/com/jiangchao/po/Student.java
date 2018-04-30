@@ -1,4 +1,6 @@
-package com.jiangchao;
+package com.jiangchao.po;
+
+import com.jiangchao.po.Person;
 
 public class Student extends Person {
     private String major;

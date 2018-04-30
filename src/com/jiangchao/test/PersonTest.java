@@ -1,4 +1,8 @@
-package com.jiangchao;
+package com.jiangchao.test;
+
+import com.jiangchao.po.Employee;
+import com.jiangchao.po.Person;
+import com.jiangchao.po.Student;
 
 public class PersonTest {
     public static void main(String[] args) {

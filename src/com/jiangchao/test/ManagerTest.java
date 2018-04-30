@@ -1,8 +1,7 @@
-package com.jiangchao;
+package com.jiangchao.test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import com.jiangchao.po.Employee;
+import com.jiangchao.po.Manager;
 
 /**
  * @Auther: Jiang Chao

@@ -1,15 +1,28 @@
-package com.jiangchao;
+package com.jiangchao.test;
+
+import com.jiangchao.po.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListTest {
+
+
+    public static double max(double...args){
+        double max = Double.NEGATIVE_INFINITY;
+        for (double each : args){
+            if (each > max)
+                max = each;
+        }
+        return max;
+    }
+
     // 这种方法不能修改值，因为java是值传递a
     public static void triple(int x){
         x = 3 * x;
     }
     public static void triple(Integer x){
-
+        // 同样不能生效
     }
     public static void main(String[] args) {
         List<Employee> staff = new ArrayList<>(10);
@@ -35,7 +48,12 @@ public class ArrayListTest {
         String b = "2";
         int c = Integer.parseInt(b);
 
-        System.out.println(c);
+
+        // 测试max方法
+        double m = max(-1, 0.5, 3, 404.5);
+        double s = max(new double[]{-1, 0.5, 3, 404.5});
+
+        System.out.println(s);
 
     }
 

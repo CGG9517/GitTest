@@ -1,7 +1,6 @@
-package com.jiangchao;
+package com.jiangchao.po;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
@@ -12,7 +11,7 @@ import java.util.Random;
  * @Description:
  * @version: 1.0
  */
-public class Employee extends Person{
+public class Employee extends Person {
     static int count = 0;
     static int staticCount;
     private static int nextId;

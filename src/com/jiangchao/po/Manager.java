@@ -1,7 +1,8 @@
-package com.jiangchao;
+package com.jiangchao.po;
+
 import java.util.Objects;
 
-public class Manager extends Employee{
+public class Manager extends Employee {
     private double bonus;
 
     public void setBonus(double bonus) {

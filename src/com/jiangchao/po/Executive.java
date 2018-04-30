@@ -1,4 +1,4 @@
-package com.jiangchao;
+package com.jiangchao.po;
 
 // final修饰类阻止被继承
 public final class Executive extends Manager {

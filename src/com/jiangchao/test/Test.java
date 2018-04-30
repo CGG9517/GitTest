@@ -1,4 +1,4 @@
-package com.jiangchao;
+package com.jiangchao.test;
 
 
 import java.io.FileNotFoundException;

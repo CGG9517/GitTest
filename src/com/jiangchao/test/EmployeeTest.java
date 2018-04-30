@@ -1,6 +1,6 @@
-package com.jiangchao;
+package com.jiangchao.test;
 
-import com.sun.glass.ui.Window;
+import com.jiangchao.po.Employee;
 
 /**
  * @Auther: Jiang Chao
